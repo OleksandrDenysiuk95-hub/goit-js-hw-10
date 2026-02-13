@@ -1,11 +1,11 @@
 // Описаний в документації
-import flatpickr from "flatpickr";
+import flatpickr from 'flatpickr';
 // Додатковий імпорт стилів
-import "flatpickr/dist/flatpickr.min.css";
+import 'flatpickr/dist/flatpickr.min.css';
 // Описаний у документації
-import iziToast from "izitoast";
+import iziToast from 'izitoast';
 // Додатковий імпорт стилів
-import "izitoast/dist/css/iziToast.min.css";
+import 'izitoast/dist/css/iziToast.min.css';
 
 const input = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('[data-start]');
@@ -25,9 +25,9 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
-    onClose(selectedDates) {
+  onClose(selectedDates) {
     const selectedDate = selectedDates[0];
-    
+
     if (selectedDate < new Date()) {
       iziToast.error({
         title: 'Error',
@@ -84,7 +84,7 @@ startBtn.addEventListener('click', () => {
       clearInterval(timerId);
       updateTimerInterface({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       input.disabled = false;
-       iziToast.success({
+      iziToast.success({
         title: 'Done',
         message: 'Countdown finished!',
         position: 'topRight',

@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 3</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load
-      src="./partials/header.html"
-      icon-path="./img/sprite.svg#logo"
-      highlight-curr="active"
-    />
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise Generator</title>
+     <link rel="stylesheet" href="./css/styles.css" />
+      <link rel="stylesheet" href="iziToast.min.css">
+    <link rel="stylesheet" href="./css/snackbar.css">
+</head>
+<body>
 
-    <main>
-      <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Welcome</span> to page 3
-        </h1>
-        <load src="./partials/back-link.html" />
-      </div>
-    </main>
+    <form class="form">
+      <label>
+        Delay (ms)
+        <input type="number" name="delay" required />
+      </label>
 
-    <load src="./partials/footer.html" />
-  </body>
+      <fieldset>
+        <legend>State</legend>
+        <label>
+          <input type="radio" name="state" value="fulfilled" checked />
+          Fulfilled
+        </label>
+        <label>
+          <input type="radio" name="state" value="rejected" />
+          Rejected
+        </label>
+      </fieldset>
+
+      <button type="submit">Create notification</button>
+    </form>
+<p><a class="centered-button" href="index.html">Go back</a></p>
+   <script type="module" src="./js/2-snackbar.js"></script>
+</body>
 </html>
